@@ -22,9 +22,7 @@ class Animal:
         
     def sleep(self):
         return(f"{self.name} is sleeping")
-    
-    def __str__(self):
-        return(self.name , self.age , self.habitat)
+
 
 # Create at least two derived classes from the Animal class. E.g. Bird and Fish.
 class Fish(Animal):
@@ -34,6 +32,9 @@ class Fish(Animal):
 
         def swim(self):
             return(f"{self.name} is swimming")
+        
+        def __str__(self):
+            return(self.name , self.age , self.habitat , self.fish_rating)
 
 class Bird(Animal):
         def __init__(self, name, age, habitat, bird_rating):
@@ -43,6 +44,8 @@ class Bird(Animal):
         def fly(self):
             return(f"{self.name} is flying")
 
+        def __str__(self):
+            return(self.name , self.age , self.habitat , self.bird_rating)
 
 # Give each of the derived classes at least one specific behavior. E.g. fly and swim.
 # Create at least two instances of the Animal derived classes with different data.
@@ -55,6 +58,8 @@ parrot = Bird("parrot","2","forest","extremely_birdlike")
 # Write code that prints out the details of each animal and calls their specific behaviors.
 
 print(shark.__str__)
+print(parrot.__str__)
+
 print(shark.swim())
 print(parrot.fly())
 
